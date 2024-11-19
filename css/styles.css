@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(190, 2, 2); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    color: #fff; 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Container Central */
+.container {
+    background-color: rgb(7, 4, 0); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto; /* Centraliza o container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+}
+
+/* Título e Subtítulo */
+.header .title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #c70b0bda;
+}
+
+.header .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+/* Poster do Filme */
+.poster .poster-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s ease-out; /* Animação de deslizamento */
+}
+
+/* Contagem Regressiva */
+.countdown h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+#release-date {
+    font-size: 1.5em;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+#countdown-timer {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FFD700;
+    animation: vibrate 0.5s ease-in-out infinite; /* Animação de vibração */
+}
+
+/* Botão do Trailer */
+.trailer-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Azul para o botão */
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: pulse 2s infinite; /* Animação de pulso */
+}
+
+.trailer-button:hover {
+    background-color: #f30000; /* Efeito de mudança de cor no hover */
+    transform: scale(1.05); /* Efeit ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .header .title {
+        font-size: 2em;
+    }
+    .header .subtitle {
+        font-size: 1em;
+    }
+    #countdown-timer {
+        font-size: 1.8em;
+    }
+    .trailer-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
